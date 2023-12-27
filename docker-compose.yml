@@ -1,0 +1,10 @@
+version: '3.5'
+services:
+  conserver:
+    image: ljonsson/conserver
+    container_name: conserver
+    network_mode: 'host'
+    volumes:
+      - ~/conserver/etc:/usr/local/etc
+      - ~/conserver/log:/usr/local/log
+    restart: 'unless-stopped'
