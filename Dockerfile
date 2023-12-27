@@ -1,6 +1,6 @@
 FROM debian:bookworm-slim
 
-LABEL version="0.1" maintainer="Lars Jonsson <lars.rl.jonsson@gmail.com>"
+LABEL version="0.2.1" maintainer="Lars Jonsson <lars.rl.jonsson@gmail.com>"
 
 RUN apt-get update  \
   && apt-get install -y --no-install-recommends \
@@ -20,8 +20,6 @@ RUN wget https://github.com/bstansell/conserver/releases/download/v8.2.7/conserv
   && make install
 
 COPY entrypoint.sh /usr/local/bin
-
-WORKDIR /usr/local
 
 VOLUME ["/usr/local"]
 
