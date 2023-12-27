@@ -8,8 +8,7 @@ RUN apt-get update  \
   ca-certificates \
   systemd \
   wget \
-  vim \
-  openssh-server
+  vim
 
 RUN wget https://github.com/bstansell/conserver/releases/download/v8.2.7/conserver-8.2.7.tar.gz \
   && tar xzf conserver-8.2.7.tar.gz \
