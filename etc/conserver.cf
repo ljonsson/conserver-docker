@@ -1,0 +1,37 @@
+config * {
+}
+
+default full {
+    rw *;
+}
+
+default * {
+    logfile /usr/local/log/&.log;
+    timestamp "1hab";
+    include full;
+    master localhost;
+}
+
+### Terminal server
+default ts.example.com {
+    host ts.example.com;
+    type host;
+    portbase 2000;
+    portinc 1;
+}
+
+### Terminal server lines
+console console1       { include ts.example.com; port 1;  baud 38400;  }
+console console2       { include ts.example.com; port 2;  baud 9600;   }
+
+### Users
+group sysadmin {
+    users root;
+    users ljonsson;
+}
+
+### Clients
+access * {
+    allowed 192.168.0.0/24;
+    trusted 127.0.0.1;
+}
