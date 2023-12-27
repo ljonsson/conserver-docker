@@ -1,6 +1,6 @@
 repo = "ljonsson/conserver"
 name = "conserver"
-version = "0.2.1"
+version = "0.2.2"
 
 build:
 	docker build --tag $(repo):$(version) .

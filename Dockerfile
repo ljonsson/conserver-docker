@@ -1,6 +1,6 @@
 FROM debian:bookworm-slim
 
-LABEL version="0.2.1" maintainer="Lars Jonsson <lars.rl.jonsson@gmail.com>"
+LABEL version="0.2.2" maintainer="Lars Jonsson <lars.rl.jonsson@gmail.com>"
 
 RUN apt-get update  \
   && apt-get install -y --no-install-recommends \
