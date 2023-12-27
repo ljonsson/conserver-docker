@@ -3,7 +3,7 @@ Run Conserver (<https://github.com/bstansell/conserver>) in a container.
 Create directory structure
 
 ```text
-mkdir -p ~/conserver/{etc,log}`
+mkdir -p ~/conserver/{etc,log}
 ```
 
 Add your conserver config files
@@ -22,7 +22,7 @@ Connect to the container and use the console
 
 ```text
 ljonsson@warsteiner> docker exec -it conserver /bin/bash
-root@warsteiner:/# console usg
+root@conserver:/# console usg
 [Enter `^Ec?' for help]
 
 Welcome to EdgeOS USG ttyS0
